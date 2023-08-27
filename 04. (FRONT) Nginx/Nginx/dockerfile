@@ -1,0 +1,16 @@
+FROM nginx
+LABEL version="1.0.0" service="Docker:nginx" objective="Deploy nginx Website"
+
+COPY ./wwwroot/ /usr/share/ngnix/html/
+COPY ./ConfServer/default.conf /etc/ngnix/conf.d/default.conf
+
+EXPOSE 80
+EXPOSE 800
+EXPOSE 801
+EXPOSE 802
+EXPOSE 803
+EXPOSE 804
+
+WORKDIR /usr/share/nginx/html
+ENTRYPOINT [ "/usr/sbin/nginx"]
+CMD [ "-g", "daemon off;" ]
