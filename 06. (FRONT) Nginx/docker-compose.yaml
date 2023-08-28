@@ -1,0 +1,36 @@
+version: '1'
+services:
+
+  WebServer1:
+    build: 
+      dockerfile: ./dockerfile
+      context: .
+      container_name: "WebServer1"
+      ports:
+      - 801:801
+      restart: always
+
+  WebServer2:
+      dockerfile: ./dockerfile
+      context: .
+      container_name: "WebServer2"
+      ports:
+        - 802:802
+      restart: always
+  
+  WebServer3:
+      dockerfile: ./dockerfile
+      context: .
+      container_name: "WebServer3"
+      ports:
+        - 803:803
+      restart: always
+  
+  WebServer4:
+      dockerfile: ./dockerfile
+      context: .
+      container_name: "WebServer4"
+      ports:
+        - 804:804
+      restart: always
+    
