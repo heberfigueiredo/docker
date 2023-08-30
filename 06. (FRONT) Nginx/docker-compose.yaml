@@ -3,7 +3,7 @@ services:
 
   WebServer1:
     build: 
-      dockerfile: ./dockerfile
+      dockerfile: ./nginx/dockerfile
       context: .
       container_name: "WebServer1"
       ports:
@@ -11,7 +11,7 @@ services:
       restart: always
 
   WebServer2:
-      dockerfile: ./dockerfile
+      dockerfile: ./nginx/dockerfile
       context: .
       container_name: "WebServer2"
       ports:
@@ -19,7 +19,7 @@ services:
       restart: always
   
   WebServer3:
-      dockerfile: ./dockerfile
+      dockerfile: ./nginx/dockerfile
       context: .
       container_name: "WebServer3"
       ports:
@@ -27,7 +27,7 @@ services:
       restart: always
   
   WebServer4:
-      dockerfile: ./dockerfile
+      dockerfile: ./nginx/dockerfile
       context: .
       container_name: "WebServer4"
       ports:
