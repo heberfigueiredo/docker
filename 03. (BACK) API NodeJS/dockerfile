@@ -1,0 +1,14 @@
+FROM nodejs:alpine
+LABEL version="1.0.0" service="Docker:nodeJS" objective="API Front in nodeJS"
+
+WORKDIR /usr/app
+COPY package*.json ./
+
+RUN npm install
+COPY . .
+
+EXPOSE 1001
+EXPOSE 1002
+EXPOSE 1003
+EXPOSE 1004
+CMD npm start
