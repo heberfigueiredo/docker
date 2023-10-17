@@ -18,32 +18,10 @@ services:
     build: 
       dockerfile: ./06. (FRONT) Nginx/Nginx/dockerfile
       context: .
-      container_name: "WebServer1"
+      container_name: "API"
       ports:
-      - 801:801
+      - 80:80
+      - 443:443
       restart: always
 
-  WebServer2:
-      dockerfile: ./06. (FRONT) Nginx/Nginx/dockerfile
-      context: .
-      container_name: "WebServer2"
-      ports:
-        - 802:802
-      restart: always
   
-  WebServer3:
-      dockerfile: ./06. (FRONT) Nginx/Nginx/dockerfile
-      context: .
-      container_name: "WebServer3"
-      ports:
-        - 803:803
-      restart: always
-  
-  WebServer4:
-      dockerfile: ./06. (FRONT) Nginx/Nginx/dockerfile
-      context: .
-      container_name: "WebServer4"
-      ports:
-        - 804:804
-      restart: always
-    

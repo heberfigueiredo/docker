@@ -5,7 +5,7 @@ services:
     build: 
       dockerfile: ./nginx/dockerfile
       context: .
-      container_name: "WebServer1"
+      container_name: "WebServer"
       ports:
       - 80:80
       - 443:443
